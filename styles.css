@@ -2,7 +2,11 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Makes width and height include padding & border */
+    box-sizing: border-box; /* Includes padding and border in width/height */
+}
+
+html {
+    scroll-behavior: smooth; /* Smooth scroll for anchor links */
 }
 
 body {
@@ -16,8 +20,8 @@ body {
     background-color: #0d1b2a;
     color: white;
     text-align: center;
-    padding: 30px 20px;   /* top/bottom, left/right */
-    margin-top: 10px;     /* prevent header sticking to top */
+    padding: 30px 20px;
+    margin-top: 10px;
     border-bottom: 5px solid #0077cc;
 }
 
@@ -56,7 +60,7 @@ body {
     width: 80%;
     margin: 30px auto;
     padding: 20px;
-    border: 2px solid #ddd;  /* Box Model Border */
+    border: 2px solid #ddd;
     border-radius: 8px;
     text-align: center;
     line-height: 1.6;
@@ -74,11 +78,11 @@ body {
 .card {
     background-color: #e0f0ff;
     flex: 1;
-    padding: 20px;             /* Box Model Padding */
-    border: 3px solid #0077cc; /* Box Model Border */
+    padding: 20px;
+    border: 3px solid #0077cc;
     border-radius: 8px;
     text-align: center;
-    margin: 10px 0;            /* Box Model Margin */
+    margin: 10px 0;
     line-height: 1.5;
     transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -99,17 +103,14 @@ body {
     border-top: 5px solid #0077cc;
 }
 
-
 /* === Responsive Design === */
 @media (max-width: 768px) {
-    /* Make intro and cards section full width with padding */
     .intro-box,
     .cards {
         width: 95%;
         margin: 20px auto;
     }
 
-    /* Stack cards vertically instead of side-by-side */
     .cards {
         flex-direction: column;
         gap: 15px;
@@ -118,5 +119,18 @@ body {
     .card {
         margin: 0 auto 15px auto;
         max-width: 100%;
+    }
+
+    
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .intro-box p,
+    .card p {
+        font-size: 1rem;
     }
 }
